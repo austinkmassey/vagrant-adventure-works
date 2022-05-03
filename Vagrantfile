@@ -56,6 +56,8 @@ Vagrant.configure("2") do |config|
     # Customize the amount of memory on the VM:
     vb.memory = "8192"
     vb.cpus = "4"
+    vb.customize ["modifyvm", :id, "--accelerate3d", "on"]
+    vb.customize ["modifyvm", :id, "--vram", "128"]
   end
   #
   # View the documentation for the provider you are using for more
@@ -68,4 +70,6 @@ Vagrant.configure("2") do |config|
   #   apt-get update
   #   apt-get install -y apache2
   # SHELL
+  config.vm.provision "shell", path: "scripts/provision_packages.ps1", privileged: true
+  config.vm.provision "shell", path: "scripts/provision_database.ps1", privileged: true
 end
