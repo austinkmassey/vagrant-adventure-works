@@ -10,7 +10,7 @@ Automate the process of standing up a Microsoft SQL Server and loading the Adven
 	 - Windows Authentication with user **vagrant**
 	 - SQL Server Authentication with user **sa** and password **Vagrant42**
 	 - FullText installed and enabled
-	 - A database called AdventureWorks from Microsoft/sql-server-samples/.../
+	 - A database called [AdventureWorks](https://github.com/microsoft/sql-server-samples/tree/master/samples/databases/adventure-works)
 - SQL Server Management Studio 18.11.1
 - Windows Server 2022 Standard (20348.643)
 	- User **vagrant** with password **vagrant** and **Vagrant's insecure key**
@@ -52,7 +52,7 @@ Start the VM using Vagrant.
 
 After starting, it may take a few minutes to download and setup everything. You should see messages from Vagrant in the terminal and a VirtualBox screen should pop up.
 
-Once complete, open SSMS and connect to the server named...
+Once complete, open SSMS and connect to the server named **WIN-3QUL3AEKMMN** to test the VM.
 
 Reset the VM by running the following command.
 
@@ -71,7 +71,7 @@ Having an environment that is easy to setup, modify, and reset to a known state 
 	- Which promotions attracted the most new customers?
 	- What time period had the fewest online sales?
 	- Using basket analysis, what products would you suggest to an online customer based on the products in their shopping cart?
-- Create another provision_database script that loads a different dataset
+- Create another database provision script that loads a different set of data
 	- [World Wide Importers](https://docs.microsoft.com/en-us/sql/samples/wide-world-importers-what-is?view=sql-server-ver15)
 	- [StackOverflow](https://www.brentozar.com/archive/2015/10/how-to-download-the-stack-overflow-database-via-bittorrent/)- Modify the provision scripts to add SSRS, SSAS, SSIS, or SSDT using Chocolatey
 	- [Chocolatey package to add SQL Server Data Tools ](https://community.chocolatey.org/packages/visualstudio2017sql/)
