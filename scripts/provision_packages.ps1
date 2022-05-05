@@ -1,1 +1,1 @@
-choco install git.install
+choco install -y git.portable
